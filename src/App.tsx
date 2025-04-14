@@ -36,7 +36,7 @@ function App() {
       </div>
 
       <footer className="mt-8 text-center text-sm text-gray-500">
-        <p>React Library Template with TypeScript, TailwindCSS, ESLint, and Prettier</p>
+        <p>React library template with TypeScript, TailwindCSS, ESLint, Prettier, and Vite.</p>
       </footer>
     </div>
   );

@@ -33,7 +33,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,css,md}\"",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint src --ext ts,tsx --fix",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "bun run build",
     "preview": "vite preview"
   },
   "peerDependencies": {
