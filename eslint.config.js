@@ -52,7 +52,6 @@ const eslintConfig = [
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-import-type-side-effects': ['error'],
       '@typescript-eslint/no-non-null-assertion': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       curly: 'error',
       'no-unused-vars': 'off',
       'object-shorthand': ['error', 'always'],
@@ -87,7 +86,7 @@ const eslintConfig = [
         {
           caseSensitive: true,
           natural: true,
-          order: ['id', 'default', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'],
+          order: ['id', 'default', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', 'icon'],
           orderBy: 'asc',
         },
       ],
