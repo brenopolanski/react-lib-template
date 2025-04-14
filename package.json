@@ -27,16 +27,19 @@
     "./style.css": "./dist/style.css"
   },
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "bun typecheck && vite build",
+    "check": "bun format:check && bun lint && bun typecheck",
+    "check:fix": "bun format:fix && bun lint:fix && bun typecheck",
     "clean": "/bin/bash scripts/clean.sh",
     "dev": "vite",
     "format:check": "bun prettier --check",
     "format:fix": "bun prettier --write",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "eslint src --ext ts,tsx --fix",
+    "lint:fix": "bun lint --fix",
     "prepublishOnly": "bun run build",
+    "prettier": "prettier \"**/*.{md,css,js,ts,tsx}\"",
     "preview": "vite preview",
-    "prettier": "prettier \"**/*.{md,css,js,ts,tsx}\""
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
@@ -57,6 +60,9 @@
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-sort-keys-custom-order-fix": "^0.1.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "react": "^19.0.0",

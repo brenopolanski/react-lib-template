@@ -1,6 +1,7 @@
+/* eslint-disable sort-keys-custom-order-fix/sort-keys-custom-order-fix */
 import React from 'react'
 
-export interface ButtonProps {
+export interface IButtonProps {
   /** The button text content */
   children: React.ReactNode
   /** Optional CSS class name */
@@ -15,14 +16,14 @@ export interface ButtonProps {
   onClick?: () => void
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button = ({
   children,
   className = '',
   variant = 'primary',
   size = 'medium',
   disabled = false,
   onClick,
-}) => {
+}: IButtonProps) => {
   const baseClasses = 'font-medium rounded-md focus:outline-none transition-colors'
 
   const variantClasses = {
