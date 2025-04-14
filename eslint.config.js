@@ -9,7 +9,7 @@ export default [
   ...compat.extends(
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
   ),
   prettierConfig,
   {
@@ -19,9 +19,9 @@ export default [
       sourceType: 'module',
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
-        }
-      }
+          jsx: true,
+        },
+      },
     },
     rules: {
       'react/react-in-jsx-scope': 'off',

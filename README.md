@@ -85,15 +85,15 @@ This will create a production-ready bundle in the `dist` directory.
 ## Usage Example
 
 ```jsx
-import { Button } from 'your-library-name';
-import 'your-library-name/style.css'; // Import styles
+import { Button } from 'your-library-name'
+import 'your-library-name/style.css' // Import styles
 
 function App() {
   return (
     <div>
       <Button variant="primary">Click Me</Button>
     </div>
-  );
+  )
 }
 ```
 

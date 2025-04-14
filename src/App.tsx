@@ -1,12 +1,10 @@
-import { Button } from './components';
+import { Button } from './components'
 
 function App() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-4">
       <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-md">
-        <h1 className="mb-6 text-center text-2xl font-bold text-gray-800">
-          React Library Component Demo
-        </h1>
+        <h1 className="mb-6 text-center text-2xl font-bold text-gray-800">React Library Component Demo</h1>
 
         <div className="mb-8">
           <h2 className="mb-3 text-lg font-medium text-gray-700">Button Variants</h2>
@@ -39,7 +37,7 @@ function App() {
         <p>React library template with TypeScript, TailwindCSS, ESLint, Prettier, and Vite.</p>
       </footer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
