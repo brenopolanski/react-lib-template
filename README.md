@@ -1,6 +1,6 @@
 # React Library Template
 
-React library template using pnpm, Turborepo, TypeScript, tsup, ESLint, Prettier, and Husky.
+React library template using pnpm, Turborepo, TypeScript, tsup, ESLint, and Prettier.
 
 ## ✨ Features
 
@@ -10,7 +10,6 @@ React library template using pnpm, Turborepo, TypeScript, tsup, ESLint, Prettier
 - 🔒 **TypeScript**: Typed superset of JavaScript.
 - 🛠️ **tsup**: Simple and fast TypeScript bundler powered by esbuild.
 - 💅 **ESLint & Prettier**: Code linting and formatting.
-- 🐶 **Husky & lint-staged**: Git hooks integration.
 
 ## 📁 Project Structure
 
@@ -18,7 +17,6 @@ The repository is structured as a monorepo:
 
 ```
 .
-├── .husky/                   # Husky configuration
 ├── examples/                 # Example projects using the library
 │   └── basic/                # Basic example
 ├── react-lib/                # The actual React library source code
