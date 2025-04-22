@@ -1,88 +1,24 @@
 {
   "name": "react-lib-template",
-  "version": "0.1.0",
-  "type": "module",
-  "description": "React library template with TypeScript, TailwindCSS, ESLint, Prettier, and Vite",
-  "license": "MIT",
-  "author": "Your Name <your.email@example.com>",
-  "keywords": [
-    "react",
-    "typescript",
-    "tailwindcss",
-    "library",
-    "template"
-  ],
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.umd.cjs"
-    },
-    "./style.css": "./dist/style.css"
+  "description": "React library template",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+   "engines": {
+    "node": ">=18",
+    "pnpm": ">=9.0.0"
   },
   "scripts": {
-    "build": "bun typecheck && vite build",
-    "check": "bun format:check && bun lint && bun typecheck",
-    "check:fix": "bun format:fix && bun lint:fix && bun typecheck",
+    "build": "turbo build",
     "clean": "/bin/bash scripts/clean.sh",
-    "dev": "stale-dep && vite",
-    "format:check": "bun prettier --check",
-    "format:fix": "bun prettier --write",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "bun lint --fix",
-    "postinstall": "stale-dep -u",
-    "preinstall": "npx only-allow bun",
-    "prepare": "husky",
-    "prepublishOnly": "bun run build",
-    "prettier": "prettier \"**/*.{md,css,js,ts,tsx}\"",
-    "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "bun lint:fix",
-      "bun format:fix"
-    ]
-  },
-  "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
+    "dev": "turbo dev",
+    "format": "prettier --write .",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint -- --fix",
+    "prepublishOnly": "pnpm build --filter=react-lib",
+    "start": "turbo start"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.21.0",
-    "@tailwindcss/postcss": "^4.1.3",
-    "@types/node": "^22.14.1",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@typescript-eslint/eslint-plugin": "^8.29.1",
-    "@typescript-eslint/parser": "^8.29.1",
-    "@vitejs/plugin-react": "^4.3.4",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9.21.0",
-    "eslint-config-prettier": "^10.1.2",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-sort-keys-custom-order-fix": "^0.1.1",
-    "eslint-plugin-unused-imports": "^4.1.4",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.2.2",
     "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "stale-dep": "^0.8.2",
-    "tailwindcss": "^4.1.3",
-    "terser": "^5.39.0",
-    "tslib": "^2.8.1",
-    "typescript": "~5.7.2",
-    "vite": "^6.2.0"
+    "turbo": "^2.5.0"
   }
 }

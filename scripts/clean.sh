@@ -5,6 +5,9 @@
 # define folders and files to remove
 folders=(
   '.eslintcache'
+  '.next'
+  '.swc'
+  '.turbo'
   'dist'
   'node_modules'
 )

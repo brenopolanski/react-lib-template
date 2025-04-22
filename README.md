@@ -1,102 +1,104 @@
 # React Library Template
 
-A modern React component library template with TypeScript, TailwindCSS, ESLint, Prettier, and Vite.
+React library template using pnpm, Turborepo, TypeScript, tsup, ESLint, Prettier, and Husky.
 
-## Features
+## ✨ Features
 
-- ⚛️ React 18+
-- 🔷 TypeScript
-- 🎨 TailwindCSS
-- 📦 Vite for fast development and optimized builds
-- 🧹 ESLint and Prettier for code quality
-- 📝 Ready to publish to npm
-- 📚 Simple demo app included
+- 🚀 **Turborepo**: High-performance build system for monorepos.
+- 📦 **pnpm**: Fast, disk space-efficient package manager.
+- ⚛️ **React**: JavaScript library for building user interfaces.
+- 🔒 **TypeScript**: Typed superset of JavaScript.
+- 🛠️ **tsup**: Simple and fast TypeScript bundler powered by esbuild.
+- 💅 **ESLint & Prettier**: Code linting and formatting.
+- 🐶 **Husky & lint-staged**: Git hooks integration.
 
-## Getting Started
+## 📁 Project Structure
 
-### Using this template
+The repository is structured as a monorepo:
 
-1. Clone this repository or use it as a template
-2. Update the package.json with your library details (name, version, author, etc.)
-3. Install dependencies
-   ```bash
-   npm install
-   ```
-4. Start the development server
-   ```bash
-   npm run dev
-   ```
+```
+.
+├── .husky/                   # Husky configuration
+├── examples/                 # Example projects using the library
+│   └── basic/                # Basic example
+├── react-lib/                # The actual React library source code
+│   ├── src/                  # Library source files
+│   ├── package.json          # Library package configuration
+│   └── tsup.config.ts        # tsup build configuration
+├── scripts/                  # Utility scripts
+├── .editorconfig             # Editor configuration
+├── .gitignore                # Git ignore rules
+├── .prettierignore           # Prettier ignore rules
+├── LICENSE                   # Project License
+├── package.json              # Root package configuration
+├── pnpm-lock.yaml            # pnpm lock file
+├── pnpm-workspace.yaml       # pnpm workspace configuration
+├── prettier.config.mjs       # Prettier configuration
+└── turbo.json                # Turborepo configuration
+```
+
+- **`react-lib/`**: Contains the source code for your React library. This is where you'll build your components, hooks, etc.
+- **`examples/`**: Contains example projects demonstrating how to use the library. This is useful for testing and showcasing features.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (>= 18)
+- [pnpm](https://pnpm.io/) (>= 9)
+
+### Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/brenopolanski/react-lib-template.git
+cd react-lib-template
+pnpm install
+```
 
 ### Development
 
-The development server provides a demo app to test your components.
+To start the development server for the library (watches for changes and rebuilds):
 
 ```bash
-npm run dev
+pnpm dev --filter=react-lib
 ```
 
-### Building for production
+To start the development server for an example project (e.g., `basic`):
 
 ```bash
-npm run build
+pnpm dev --filter=basic
 ```
 
-This will create a production-ready bundle in the `dist` directory.
+### Build
 
-### Publishing to npm
+To build the library for production:
 
-1. Update the `package.json` with your library details
-2. Build your library
-   ```bash
-   npm run build
-   ```
-3. Publish to npm
-   ```bash
-   npm publish
-   ```
-
-## Library Structure
-
-```
-├── dist/                  # Built library output
-├── src/
-│   ├── components/        # React components
-│   │   ├── Button/        # Example component
-│   │   │   ├── Button.tsx # Component implementation
-│   │   │   └── index.ts   # Component exports
-│   │   └── index.ts       # Components barrel file
-│   ├── index.ts           # Main library exports
-│   ├── App.tsx            # Demo application
-│   └── main.tsx           # Demo application entry
-├── .prettierrc            # Prettier configuration
-├── eslint.config.js       # ESLint configuration
-├── tailwind.config.js     # TailwindCSS configuration
-├── tsconfig.json          # TypeScript configuration
-└── vite.config.ts         # Vite configuration
+```bash
+pnpm build --filter=react-lib
 ```
 
-## Adding New Components
+To build all packages in the monorepo:
 
-1. Create a new directory in `src/components`
-2. Add your component files
-3. Export your component in the component's index.ts
-4. Add the export to `src/components/index.ts`
-
-## Usage Example
-
-```jsx
-import { Button } from 'your-library-name'
-import 'your-library-name/style.css' // Import styles
-
-function App() {
-  return (
-    <div>
-      <Button variant="primary">Click Me</Button>
-    </div>
-  )
-}
+```bash
+pnpm build
 ```
 
-## License
+### Linting and Formatting
 
-MIT
+To lint the codebase:
+
+```bash
+pnpm lint
+```
+
+To format the codebase:
+
+```bash
+pnpm format
+```
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
